@@ -1,0 +1,11 @@
+version: '3'
+services:
+  bert_api:
+    build: .
+    restart: always
+    container_name: bert
+    volumes: 
+      - .:/app/.
+    ports:
+      - "5000:5000"
+    network_mode: host
